@@ -16,17 +16,17 @@ body {
 
 #cube {
     position: absolute;
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 
     top: calc(50% - 250px);
     left: calc(50% - 150px);
 
-    animation: cubeRotate 10s infinite normal linear;
+    -webkit-animation: cubeRotate 10s infinite normal linear;
 }
 
 @keyframes cubeRotate {
     100% {
-        transform: rotate3d(0.5, 1, 0, -360deg);
+        -webkit-transform: rotate3d(0.5, 1, 0, -360deg);
     }
 }
 
