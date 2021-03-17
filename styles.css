@@ -6,8 +6,8 @@
 }
 
 body {
-    max-width: 100vw;
-    min-height: 100vh;
+    max-width: 100%;
+    min-height: 200vh;
     
     background-color: #374045;
 }
@@ -16,17 +16,18 @@ body {
 
 #cube {
     position: absolute;
-    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: rotate3d(0.5, 1, 0, -115deg);
 
     top: calc(50% - 250px);
     left: calc(50% - 150px);
 
-    -webkit-animation: cubeRotate 10s infinite normal linear;
+    animation: cubeRotate 10s infinite normal linear;
 }
 
 @keyframes cubeRotate {
     100% {
-        -webkit-transform: rotate3d(0.5, 1, 0, -360deg);
+        transform: rotate3d(0.5, 1, 0, -475deg);
     }
 }
 
@@ -39,12 +40,6 @@ body {
     border: 1px solid grey;
 
     animation: fadeIn 5s 1 normal linear;
-}
-
-@keyframes fadeIn {
-    0% {
-        filter: opacity(0);
-    }
 }
 
 .one {
@@ -71,12 +66,18 @@ body {
     transform: translateY(-250px) rotateX(90deg);
 }
 
+@keyframes fadeIn {
+    0% {
+        filter: opacity(0);
+    }
+}
+
 /* INTRO SECTION */
 
 #intro {
     position: absolute;
 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     display: flex;
@@ -121,20 +122,6 @@ body {
     animation: bounce 500ms infinite normal ease-in-out;
 }
 
-/* PROJECTS SECTION */
-
-/* #projects {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-
-    color: white;
-    transform: translateY(-50vh) rotateX(90deg);
-} */
-
 /* SOCIALS */
 
 .icons {
@@ -172,40 +159,14 @@ body {
 
 /* NAVIGATION */
 
-#navigation {
-    width: 100vw;
-    height: 100vh;
-
-    position: absolute;
-
-    background-color: transparent;
-}
-
-.up, .down, .left, .right {
+#arrow {
     position: absolute;
 
     color: white;
 
     font-size: 2rem;
     cursor: pointer;
-}
 
-.up {
-    top: 2.5%;
-    left: calc(50% - 1rem);
-}
-
-.left {
-    top: calc(50% - 1rem);
-    left: 2.5%;
-}
-
-.right {
-    top: calc(50% - 1rem);
-    right: 2.5%;
-}
-
-.down {
     left: calc(50% - 1rem);
     bottom: 2.5%;
     animation: bounce1 500ms infinite normal ease-in-out;
@@ -222,3 +183,17 @@ body {
         transform: scale(1.1,0.9);
     }
 }
+
+/* PROJECTS SECTION */
+
+/* #projects {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+
+    color: white;
+    transform: translateY(-50vh) rotateX(90deg);
+} */

@@ -1,19 +1,16 @@
 // TYPING ANIMATION
-let introHeader = document.getElementById('introHeader');
-let introP = document.getElementById('introP');
+const introHeader = document.getElementById('introHeader');
+const introP = document.getElementById('introP');
 
 let counter = -1;
 
-let header = 'Hello, my name is Chung Au';
+const header = 'Hello, my name is Chung Au';
 
-let arr = header.split('');
+const arr = header.split('');
 
 let title = arr[counter];
 
 const timer = 100;
-
-// introHeader.innerHTML +=
-// `<div id = 'blinker'></div>`
 
 let levin = setInterval (type = () => {
     counter++;
@@ -26,6 +23,18 @@ setTimeout(stop = () => {
     clearInterval(levin);
     introP.classList.add('slideIn');
 }, arr.length * timer);
+
+// Click Scroll
+
+let arrow = document.getElementById('arrow');
+
+arrow.addEventListener('click', ()=> {
+    window.scrollTo(0, 937);
+});
+
+
+
+
 
 
 
