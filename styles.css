@@ -23,6 +23,8 @@ body {
     left: calc(50% - 150px);
 
     animation: cubeRotate 10s infinite normal linear;
+
+    z-index: -1;
 }
 
 @keyframes cubeRotate {
@@ -75,8 +77,6 @@ body {
 /* INTRO SECTION */
 
 #intro {
-    position: absolute;
-
     width: 100%;
     height: 100vh;
 
@@ -186,14 +186,23 @@ body {
 
 /* PROJECTS SECTION */
 
-/* #projects {
-    width: 100vw;
+#projects {
+    width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
+
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 30vh 30vh 30vh;
+    row-gap: 5vh;
+    justify-content: space-around;
 
     color: white;
-    transform: translateY(-50vh) rotateX(90deg);
-} */
+}
+
+.projectCards {
+    width: 20vw;
+    height: 30vh;
+
+    border-radius: 25px;
+    border: solid white;
+}
