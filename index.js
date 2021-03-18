@@ -33,6 +33,7 @@ arrow.addEventListener('click', ()=> {
 });
 
 
+let projects = document.getElementsByClassName('projectCards');
 
 
 
