@@ -198,19 +198,20 @@ img {
     height: 100vh;
 
     color: white;
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 #projects h1 {
     text-align: center;
     height: 10vh;
+    letter-spacing: 0.5rem;
 }
 
 #projects-container {
     display: grid;
     grid-template-columns: 25vw 25vw 25vw;
-    grid-template-rows: 30vh 30vh 30vh;
-    row-gap: 5vh;
+    grid-template-rows: 30vh 30vh;
+    row-gap: 10vh;
     justify-content: space-around;
 }
 .projectCards {
