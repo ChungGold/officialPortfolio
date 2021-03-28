@@ -115,12 +115,12 @@ img:hover {
 
     line-height: 2rem;
     filter: opacity(0);
-    animation-fill-mode: forwards;
     transform: translateX(-400px);
 }
 
 .slideIn {
     animation: slideIn 1 ease-in-out normal 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes slideIn {
@@ -230,6 +230,8 @@ img:hover {
     height: 40vw;
     display: flex;
     flex-flow: row wrap;
+    transform: translateX(-400px);
+    filter: opacity(0);
 }
 
 

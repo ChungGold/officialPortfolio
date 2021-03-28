@@ -72,3 +72,10 @@ for (let j = 0; j < icons.length; j++) {
         }, 3000)
     });
 }
+
+//Projects slideIn
+
+let allProjects = document.getElementById('projects-container');
+
+window.onscroll = () => {allProjects.classList.add('slideIn');}
+
