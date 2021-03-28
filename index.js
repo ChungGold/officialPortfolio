@@ -16,7 +16,7 @@ let levin = setInterval (type = () => {
     counter++;
     title = arr[counter];
     introHeader.innerHTML +=
-    `<a class = 'letters'>${title}</a>`
+    `<a>${title}</a>`
 }, timer);
 
 setTimeout(stop = () => {
@@ -31,7 +31,7 @@ let arrow = document.getElementById('arrow');
 arrow.addEventListener('click', ()=> {
     window.scrollTo({
         left: 0, 
-        top: 1000, 
+        top: 1050, 
         behavior: "smooth"});
 });
 
@@ -45,11 +45,24 @@ for (let i = 0; i < projects.length; i++) {
 }
 
 
+//Letter hop
+let letters = document.getElementsByClassName('project-title');
+let icons = document.getElementsByClassName('icons');
 
-// PAGE ROTATE
-// const button = document.getElementById('navButton');
+for (let i = 0; i < letters.length; i++) {
+    letters[i].addEventListener('mouseenter', () => {
+        letters[i].classList.add('hop');
+        setTimeout(()=> {
+            letters[i].classList.remove('hop');
+        }, 500)
+    });
+}
 
-// button.addEventListener('click', movePage = () => {
-
-// });
-
+for (let j = 0; j < icons.length; j++) {
+    icons[j].addEventListener('mouseenter', () => {
+        icons[j].classList.add('hop');
+        setTimeout(()=> {
+            icons[j].classList.remove('hop');
+        }, 500)
+    });
+}

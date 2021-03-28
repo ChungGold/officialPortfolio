@@ -130,31 +130,24 @@ img:hover {
     }
 }
 
-.letters:hover {
-    animation: bounce 500ms infinite normal ease-in-out;
-}
-
 /* SOCIALS */
 
 .icons {
     color: white;
     text-decoration: none;
-    animation: bounce 500ms infinite normal ease-in-out;
 }
 
 #socials {
     position: absolute;
-
     font-size: 2rem;
     letter-spacing: 3rem;
     bottom: 15%;
 
     z-index: 1;
-}
-
-#linkedin:hover, #github:hover, #email:hover {
-    cursor: pointer;
-    animation: bounce 500ms infinite normal ease-in-out;
+    
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
 }
 
 @keyframes bounce {
@@ -163,6 +156,7 @@ img:hover {
     }
     50% {
         transform: scale(0.9,1.2) translateY(-40px);
+        color: #ffd369;
     }
     75% {
         transform: scale(1.2,0.8);
@@ -210,6 +204,19 @@ img:hover {
     text-align: center;
     height: 10vh;
     letter-spacing: 0.5rem;
+    margin-bottom: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    cursor: pointer;
+}
+
+.hop {
+    animation: bounce 500ms infinite normal ease-in-out;
 }
 
 #projects-container {
