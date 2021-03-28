@@ -41,8 +41,14 @@ let projects = document.getElementsByClassName('projectCards');
 for (let i = 0; i < projects.length; i++) {
     projects[i].addEventListener('click', ()=> {
         projects[i].classList.add('expand');
+        setTimeout(()=> {
+            projects[i].classList.remove('expand');
+        }, 5000)
     });
 }
+
+
+
 
 
 //Letter hop
@@ -63,6 +69,6 @@ for (let j = 0; j < icons.length; j++) {
         icons[j].classList.add('hop');
         setTimeout(()=> {
             icons[j].classList.remove('hop');
-        }, 500)
+        }, 3000)
     });
 }
