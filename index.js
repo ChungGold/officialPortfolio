@@ -41,10 +41,14 @@ let projects = document.getElementsByClassName('projectCards');
 for (let i = 0; i < projects.length; i++) {
     projects[i].addEventListener('click', ()=> {
         projects[i].classList.add('expand');
-        setTimeout(()=> {
+        setTimeout(()=>{window.addEventListener('click', () => {
             projects[i].classList.remove('expand');
-        }, 5000)
+            window.removeEventListener('click');
+        });}, 10);
     });
+    // setTimeout(()=>{window.addEventListener('click', () => {
+    //     projects[i].classList.remove('expand');
+    // });}, 10);
 }
 
 
