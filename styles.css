@@ -226,8 +226,8 @@ img:hover {
     position: absolute;
     margin-left: 30vw;
 
-    width: 40vw;
-    height: 40vw;
+    width: clamp(300px, 40vw, 1000px);
+    height: clamp(300px, 40vw, 1000px);
     display: flex;
     flex-flow: row wrap;
     transform: translateX(-400px);
@@ -236,8 +236,8 @@ img:hover {
 
 
 .projectCards {
-    width: 20vw;
-    height: 20vw;
+    width: clamp(150px, 20vw, 500px);
+    height: clamp(150px, 20vw, 500px);
 
     border-radius: 25px;
     border: solid grey 1px;
@@ -245,8 +245,8 @@ img:hover {
 
 .expand { 
     position: absolute;
-    width: 40vw;
-    height: 40vw;
+    width: clamp(300px, 40vw, 1000px);
+    height: clamp(300px, 40vw, 1000px);
     z-index: 1;
     animation: expand 1000ms ease-in-out normal 1;
 }
