@@ -29,7 +29,10 @@ setTimeout(stop = () => {
 let arrow = document.getElementById('arrow');
 
 arrow.addEventListener('click', ()=> {
-    window.scrollTo(0, 937);
+    window.scrollTo({
+        left: 0, 
+        top: 1000, 
+        behavior: "smooth"});
 });
 
 // Project Cards
