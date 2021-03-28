@@ -32,10 +32,14 @@ arrow.addEventListener('click', ()=> {
     window.scrollTo(0, 937);
 });
 
-
+// Project Cards
 let projects = document.getElementsByClassName('projectCards');
 
-
+for (let i = 0; i < projects.length; i++) {
+    projects[i].addEventListener('click', ()=> {
+        projects[i].classList.add('expand');
+    });
+}
 
 
 

@@ -17,6 +17,11 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
+    filter: grayscale(1);
+}
+
+img:hover {
+    filter: grayscale(0);
 }
 
 /* BACKGROUND */
@@ -208,17 +213,54 @@ img {
 }
 
 #projects-container {
-    display: grid;
-    grid-template-columns: 25vw 25vw 25vw;
-    grid-template-rows: 30vh 30vh;
-    row-gap: 10vh;
-    justify-content: space-around;
+    /* display: grid;
+    grid-template-columns: 20vw 20vw;
+    grid-template-rows: 20vw 20vw; */
+    position: absolute;
+    margin-left: 30vw;
+
+    width: 40vw;
+    height: 40vw;
+    display: flex;
+    flex-flow: row wrap;
 }
+
+
 .projectCards {
-    width: 25vw;
-    height: 30vh;
+    width: 20vw;
+    height: 20vw;
 
     border-radius: 25px;
-    border: solid GREY 1px;
+    border: solid grey 1px;
+}
+
+.expand { 
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    z-index: 1;
+    animation: expand 1000ms ease-in-out normal 1;
+}
+
+@keyframes expand {
+    0% {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+
+
+
+.card1 {
+    animation: flip 1s 1 normal linear forwards;
+    transform-origin: left;
+}
+
+@keyframes flip {
+    100% {
+        transform: rotateY(-180deg);
+        z-index: 1;
+    }
 }
 
