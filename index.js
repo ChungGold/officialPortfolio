@@ -40,19 +40,14 @@ let projects = document.getElementsByClassName('projectCards');
 
 for (let i = 0; i < projects.length; i++) {
     projects[i].addEventListener('click', ()=> {
-        projects[i].classList.add('expand');
-        setTimeout(()=>{window.addEventListener('click', () => {
+        if (projects[i].classList.contains('expand') === true) {
             projects[i].classList.remove('expand');
-            window.removeEventListener('click');
-        });}, 10);
+            console.log('what');
+        } else {
+            projects[i].classList.add('expand');
+        }
     });
-    // setTimeout(()=>{window.addEventListener('click', () => {
-    //     projects[i].classList.remove('expand');
-    // });}, 10);
 }
-
-
-
 
 
 //Letter hop
