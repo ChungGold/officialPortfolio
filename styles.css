@@ -198,6 +198,11 @@ img:hover {
 
     color: white;
     margin-top: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 #projects h1 {
@@ -205,10 +210,7 @@ img:hover {
     height: 10vh;
     letter-spacing: 0.5rem;
     margin-bottom: 5vh;
-
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .project-title {
@@ -220,12 +222,6 @@ img:hover {
 }
 
 #projects-container {
-    /* display: grid;
-    grid-template-columns: 20vw 20vw;
-    grid-template-rows: 20vw 20vw; */
-    position: absolute;
-    margin-left: 30vw;
-
     width: clamp(300px, 40vw, 1000px);
     height: clamp(300px, 40vw, 1000px);
     display: flex;
