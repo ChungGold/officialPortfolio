@@ -178,6 +178,10 @@ img:hover {
     animation: bounce1 500ms infinite normal ease-in-out;
 }
 
+#arrow:active {
+    color: #ffd369;
+}
+
 @keyframes bounce1 {
     25% {
         transform: scale(1.2,0.8);
@@ -236,6 +240,7 @@ img:hover {
 
     border-radius: 25px;
     border: solid grey 1px;
+    cursor: pointer;
 }
 
 .expand { 

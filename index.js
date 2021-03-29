@@ -42,7 +42,6 @@ for (let i = 0; i < projects.length; i++) {
     projects[i].addEventListener('click', ()=> {
         if (projects[i].classList.contains('expand') === true) {
             projects[i].classList.remove('expand');
-            console.log('what');
         } else {
             projects[i].classList.add('expand');
         }
